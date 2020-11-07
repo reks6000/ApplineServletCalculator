@@ -34,7 +34,7 @@ public class Calculator {
                 }
                 return res;
             default:
-                return null;
+                return "Недопустимая операция. Список возможных операций: +, -, *, /";
         }
     }
 }

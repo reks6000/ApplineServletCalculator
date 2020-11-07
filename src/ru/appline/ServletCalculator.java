@@ -13,6 +13,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+//Свервлет
 @WebServlet(urlPatterns = "/get")
 public class ServletCalculator extends HttpServlet {
     Gson gson = new GsonBuilder().setPrettyPrinting().create();
@@ -40,7 +41,7 @@ public class ServletCalculator extends HttpServlet {
 
         response.setContentType("application/json;charset=utf-8");
         PrintWriter pw = response.getWriter();
-        
+
         json.addProperty("result", Calculator.parse(a,b,operation));
         pw.print(json);
     }
