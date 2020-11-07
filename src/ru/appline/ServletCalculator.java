@@ -13,7 +13,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-//Свервлет
+//Сервлет получает на вход json с операндами a и b и математической операцией, которую над ними нужно произвести
+//Сервлет возвращает в формате json результат математической операции, либо сообщение об ошибке
 @WebServlet(urlPatterns = "/get")
 public class ServletCalculator extends HttpServlet {
     Gson gson = new GsonBuilder().setPrettyPrinting().create();
